@@ -1,0 +1,65 @@
+---
+title: "Abstract"
+author: "Víctor Granda"
+date: "12 de agosto de 2016"
+output: pdf_document
+---
+
+# INTRO ABOUT SAPFLOW
+
+Water flows from the soil to the atmosphere passing through the plants in the
+transpiration process. Transpiration is involved in the water equilibrium of the
+soil-plant-atmosphere complex, and it is physiologically regulated at the plant
+level to allow right development and growth. There is a great ecological variation
+in this regulation, which is in need of better understanding as transpiration
+involves around a 65% of total water evaporated from the soil.  
+Many studies and projects worked or are working in unveal the dark areas related to
+transpiration and its control, but most of them at local scale or involving
+only few species or biomes.
+
+
+El agua es fundamental para las plantas, como pone de manifiesto que las
+hojas necesiten un estado óptimo de hidratación para mantener su
+funcionamiento. No obstante, la atmósfera induce la evaporación del agua de
+las hojas, en un proceso conocido como transpiración, que a su vez genera el
+imprescindible ascenso de agua desde las raíces. Frente a las continuas
+variaciones en las condiciones de humedad de la atmósfera y del suelo, la
+mayoría de plantas terrestres controlan la transpiración (y la absorción de CO 2 )
+a través de la regulación de la abertura de pequeños poros (estomas) en la
+superficie foliar. Esta regulación fisiológica de la transpiración presenta una
+gran variación ecológica, que es necesario entender para predecir la respuesta
+de las plantas a la sequía y entender mejor el balance hídrico, ya que la
+transpiración supone un 65% del total de agua evaporada de la superficie
+terrestre.
+
+Los métodos de flujo de savia
+utilizan el calor como trazador del
+transporte de agua en el xilema y
+sirven para estimar la transpiración a
+nivel de planta, sobretodo en
+plantas leñosas. Existen diversos
+métodos de medida de flujo de
+savia, cuyo uso empezó a a
+generalizarse a partir de los 1990s.
+Una síntesis global podría incluir
+datos de flujo de savia de >700
+estudios publicados. Idealmente,
+estos datos deben incluir series
+temporales estacionales de flujo de
+savia, meteorología y humedad del
+suelo, además de metadatos a
+diferentes niveles.
+
+SAPFLUXNET permitirá, por primera vez, llevar a cabo análisis globales de
+los factores ecológicos que determinan la variación de la transpiración y su
+regulación fisiológica a nivel de planta.
+- ¿Cuánta agua transpiran plantas de diversas especies, en diferentes
+biomas y/o climas?
+- ¿Cómo varía globalmente la regulación de la transpiración en función de la
+demanda evaporativa y la humedad del suelo?
+- Existen patrones generales en la relación entre transpiración y tamaño de
+la planta u otros atributos funcionales (p.ej. diámetro del tronco, área foliar).
+- ¿Qué relación existe entre el tipo de regulación de la transpiración a nivel
+de planta y la vulnerabilidad a la sequía de la planta?
+- ¿Cuál es la contribución de la transpiración de la vegetación al total de
+agua evapotranspirada por el ecosistema y su variación a nivel global?
