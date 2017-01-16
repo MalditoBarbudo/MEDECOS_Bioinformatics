@@ -1,15 +1,16 @@
 ---
-title: 'Compiling a global database of sap flow measurements: the \emph{SAPFLUXNET} data workflow'
 output:
   beamer_presentation:
-    theme: "Pittsburgh"
+    theme: "Boadilla"
     colortheme: "dolphin"
     fonttheme: "structuresmallcapsserif"
     latex_engine: xelatex
     slide_level: 2
     fig_caption: false
+    df_print: kable
     includes:
       in_header: mystyle.tex
+      before_body: title.tex
 ---
 
 ```{r setup, include=FALSE}
@@ -96,25 +97,46 @@ bar_minimal_theme <- function(base_size = 10, base_family = "sans") {
 
 ## Introduction
 
+\begin{columns}[T] % align columns
+\begin{column}{.42\textwidth}
+
+\includegraphics[height=5cm,width=5cm]{sapflow_diagram.pdf}
+
+\end{column}%
+\hfill%
+\begin{column}{.54\textwidth}
+
+\vspace{5mm}
+Different \textbf{thermodynamic methods} to determine sap flow using heat as a tracer sap movement\\
+\vspace{5mm}
+Proxy of the movement of water between the soil-plant-atmosphere continuum.\\
+\vspace{5mm}
+Allows \textbf{upscaling} from stem to plant and landscape level.
+
+\end{column}%
+\end{columns}
+
+## Introduction
+
 The **SAPFLUXNET** initiative is building the first global database of
 plant-level sap flow measurements to analyse the environmental and physiologycal
 factors driving tree- and stand-level transpiration
 
 ![](map.png)
 
-## Data Workflow
+## Data Characteristics
 
 Target datasets:
 
 - Stem or whole-plant level
 - Field conditions
 - Sub-daily intervals
-- Environmental data available
+- Environmental data available (RH, Ta, PAR...)
 - Abundant metadata (site, stand, plant, species and environmental)
 
-## Data Workflow
+## Data Characteristics
 
-Upscaled complexity:
+High data complexity:
 
 - substantial methodological variability
 
@@ -133,14 +155,32 @@ plant_md %>%
   )
 ```
 
+## Data Characteristics
 
-## Slide with R Output
+High data complexity:
 
-```{r cars, echo = TRUE}
-summary(cars)
-```
+- Large datasets and ancillary metadata
 
-```{r pressure}
-plot(pressure)
-```
+Metadata | Items
+:--------|-----:
+Site | 20 
+Stand | 16
+Species | 4
+Plant | 24
+Environmental | 16
+---------|------
+**Total** | **80**
+
+## Data Characteristics
+
+### How to assay quality and store data?
+
+We need **semi-automatic**, **reproducible** and **robust** checks to ensure the quality of
+the submmited datasets. Also, we need to store the data in a way that allows
+all essential information to be **available** in order to use the data in checks
+and analyses
+
+## SAPFLUXNET Data Ingestion Process
+
+![](general_schema.pdf)
 
