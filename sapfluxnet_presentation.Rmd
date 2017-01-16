@@ -1,7 +1,7 @@
 ---
 output:
   beamer_presentation:
-    theme: "Boadilla"
+    theme: "Madrid"
     colortheme: "dolphin"
     fonttheme: "structuresmallcapsserif"
     latex_engine: xelatex
@@ -116,7 +116,7 @@ Allows \textbf{upscaling} from stem to plant and landscape level.
 \end{column}%
 \end{columns}
 
-## Introduction
+## The time is ripe for a global database
 
 The **SAPFLUXNET** initiative is building the first global database of
 plant-level sap flow measurements to analyse the environmental and physiologycal
@@ -124,9 +124,7 @@ factors driving tree- and stand-level transpiration
 
 ![](map.png)
 
-## Data Characteristics
-
-Target datasets:
+## Target datasets
 
 - Stem or whole-plant level
 - Field conditions
@@ -180,7 +178,22 @@ the submmited datasets. Also, we need to store the data in a way that allows
 all essential information to be **available** in order to use the data in checks
 and analyses
 
-## SAPFLUXNET Data Ingestion Process
+## SAPFLUXNET Data Flow
 
 ![](general_schema.pdf)
 
+## SAPFLUXNET Data Flow
+
+![](general_schema_grayed_1.pdf)
+
+## SAPFLUXNET Data Flow
+
+![](general_schema_grayed_2.pdf)
+
+## SAPFLUXNET Data Flow
+
+![](QC1_process.pdf)
+
+## SAPFLUXNET Server Structure
+
+![](server_folders.pdf)
