@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.13)  16 JAN 2017 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.1.13)  17 JAN 2017 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -60,24 +60,20 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no y in font nullfont!
 ! Undefined control sequence.
 l.6 \setmainfont
-                {Josefin Slab}
+                {Sanchez}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-Missing character: There is no J in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
 Missing character: There is no S in font nullfont!
-Missing character: There is no l in font nullfont!
 Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no z in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 5--7
 []
@@ -595,28 +591,28 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.13 
+l.14 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 8--13
+Overfull \hbox (20.0pt too wide) in paragraph at lines 8--14
 []
  []
 
 
-Overfull \hbox (7.92215pt too wide) in paragraph at lines 8--13
+Overfull \hbox (7.92215pt too wide) in paragraph at lines 8--14
 \OT1/cmr/m/it/10 et
  []
 
 
-Overfull \hbox (10.73328pt too wide) in paragraph at lines 8--13
+Overfull \hbox (10.73328pt too wide) in paragraph at lines 8--14
 \OT1/cmr/m/it/10 al.$[]$
  []
 
 
-Overfull \hbox (43.56842pt too wide) in paragraph at lines 8--13
+Overfull \hbox (43.56842pt too wide) in paragraph at lines 8--14
 []\OML/cmm/m/it/10 fn:pdf $ 
  []
 

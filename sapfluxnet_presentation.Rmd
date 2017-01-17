@@ -169,7 +169,7 @@ Environmental | 16
 ---------|------
 **Total** | **80**
 
-## Data Characteristics
+## 
 
 ### How to assay quality and store data?
 
@@ -178,13 +178,17 @@ the submmited datasets. Also, we need to store the data in a way that allows
 all essential information to be **available** in order to use the data in checks
 and analyses
 
+## SAPFLUXNET Server Structure
+
+![](server_folders.pdf)
+
 ## SAPFLUXNET Data Flow
 
 ![](general_schema.pdf)
 
 ## SAPFLUXNET Data Flow
 
-![](general_schema_grayed_1.pdf)
+![](general_schema_grayed.pdf)
 
 ## SAPFLUXNET Data Flow
 
@@ -192,8 +196,24 @@ and analyses
 
 ## SAPFLUXNET Data Flow
 
-![](QC1_process.pdf)
+\begin{columns}[T] % align columns
+\begin{column}{.50\textwidth}
 
-## SAPFLUXNET Server Structure
+\includegraphics{QC1_process.pdf}
 
-![](server_folders.pdf)
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+\textbf{QC Level 1}\\
+\vspace{5mm}
+In charge of general metadata and data quality checks:\\
+
+\begin{itemize}
+  \item Presence/Absence of metadata and data variables
+  \item Metadata values correctness (i.e coordinates, species names...)
+  \item Sapflow and environmental data correctness (format, timezone, gaps, continuity...)
+  \item Uniformization and unit transformations of data (solar time, sapflow at different levels...)
+\end{itemize}
+
+\end{column}%
+\end{columns}
