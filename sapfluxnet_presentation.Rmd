@@ -15,89 +15,11 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-load('level_1_metadata.RData')
-
-# libraries
-library(ggplot2)
-library(dplyr)
-library(sapfluxnetQC1)
-library(viridis)
-
-## ggplot themes
-bar_minimal_theme <- function(base_size = 10, base_family = "sans") {
-  half_line <- base_size/2
-  theme(line = element_line(colour = "#5C97BF", size = 1,
-                            linetype = 1, lineend = "butt"),
-        rect = element_rect(fill = NA, colour = "#5C97BF",
-                            size = 1, linetype = 1),
-        text = element_text(family = base_family, face = "plain",
-                            colour = "#5C97BF", size = base_size,
-                            lineheight = 0.9, hjust = 0.5,
-                            vjust = 0.5, angle = 0,
-                            margin = margin(), debug = FALSE),
-        axis.line = element_blank(),
-        # axis.line.x = element_line(),
-        # axis.line.y = element_line(),
-        axis.text = element_text(size = rel(0.8)),
-        axis.text.x = element_text(margin = margin(t = 0.8 * half_line*2.5),
-                                   vjust = 1),
-        axis.text.y = element_text(margin = margin(r = 0.8 * half_line*2),
-                                   hjust = 1),
-        axis.ticks.y = element_line(colour = "#5C97BF", size = 0.5),
-        axis.ticks.x = element_blank(),
-        axis.ticks.length = unit(-half_line, "pt"),
-        axis.title.x = element_text(margin = margin(t = 0.8 * half_line,
-                                                    b = 0.8 * half_line/2)),
-        axis.title.y = element_text(angle = 90,
-                                    margin = margin(r = 0.8 * half_line,
-                                                    l = 0.8 * half_line/2)),
-        legend.background = element_rect(colour  = NA, fill = ),
-        legend.spacing = unit(1, "pt"),
-        legend.key = element_rect(colour = NA),
-        legend.key.size = unit(1, "lines"),
-        legend.key.height = NULL,
-        legend.key.width = NULL,
-        legend.text = element_text(size = rel(0.8)),
-        legend.text.align = NULL,
-        legend.title = element_text(hjust = 0.5),
-        legend.title.align = 0,
-        legend.position = "right",
-        legend.direction = NULL,
-        legend.justification = "top",
-        legend.box = NULL,
-        panel.background = element_blank(),
-        panel.border = element_blank(),
-        # panel.grid = element_blank(),
-        # panel.grid.major = element_line(colour = "black", size = rel(0.3),
-        #                                 linetype = 2),
-        panel.grid.minor = element_blank(),
-        panel.grid.major.x = element_blank(),
-        panel.grid.major.y = element_line(colour = "#5C97BF", size = .8,
-                                          linetype = 1),
-        panel.spacing = unit(half_line, "pt"),
-        panel.spacing.x = NULL,
-        panel.spacing.y = NULL,
-        panel.ontop = FALSE,
-        strip.background = element_rect(size = rel(0.3)),
-        strip.text = element_text(colour = "grey10", size = rel(0.8)),
-        strip.text.x = element_text(margin = margin(t = half_line,
-                                                    b = half_line)),
-        strip.text.y = element_text(angle = -90,
-                                    margin = margin(l = half_line, r = half_line)),
-        strip.switch.pad.grid = unit(0.1, "cm"),
-        strip.switch.pad.wrap = unit(0.1, "cm"),
-        plot.background = element_blank(),
-        plot.title = element_text(size = rel(1.2),
-                                  margin = margin(b = half_line * 1.2)),
-        plot.margin = margin(half_line, half_line, half_line, half_line),
-        
-        complete = TRUE)
-}
 ```
 
 ## Introduction
 
-\begin{columns}[T] % align columns
+\begin{columns}[T]
 \begin{column}{.42\textwidth}
 
 \includegraphics[height=5cm,width=5cm]{sapflow_diagram.pdf}
@@ -136,38 +58,36 @@ factors driving tree- and stand-level transpiration
 
 High data complexity:
 
-- substantial methodological variability
+\begin{columns}[T]
+\begin{column}{.58\textwidth}
 
-```{r methods, fig.height=2, fig.width=3}
-total <- length(plant_md[['pl_sens_meth']])
-plant_md %>%
-  group_by(pl_sens_meth) %>%
-  summarise(perc = (n()/total)*100) %>%
-  ggplot(aes(x = pl_sens_meth, y = perc, fill = pl_sens_meth)) +
-  geom_bar(stat = 'identity') +
-  scale_fill_viridis(discrete = TRUE) +
-  labs(x = 'Method', y = '% of total plants') +
-  bar_minimal_theme(base_size = 6) +
-  theme(
-    legend.position = 'none'
-  )
-```
+\includegraphics{methods_plot.pdf}
 
-## Data Characteristics
+\end{column}%
+\hfill%
+\begin{column}{.33\textwidth}
 
-High data complexity:
+\begin{table}
+\begin{tabular}{lr}
+Metadata & Items\\
+\hline
+Site & 20\\
+Stand & 16\\
+Species & 4\\
+Plant & 24\\
+Environmental & 16\\
+\hline
+\hline
+\textbf{Total} & \textbf{80}\\
 
-- Large datasets and ancillary metadata
 
-Metadata | Items
-:--------|-----:
-Site | 20 
-Stand | 16
-Species | 4
-Plant | 24
-Environmental | 16
----------|------
-**Total** | **80**
+\end{tabular}
+\end{table}
+
+\end{column}%
+\end{columns}  
+
+---
 
 ## 
 
@@ -180,19 +100,64 @@ and analyses
 
 ## SAPFLUXNET Server Structure
 
+\centering
+
 ![](server_folders.pdf)
 
 ## SAPFLUXNET Data Flow
+
+\centering
 
 ![](general_schema.pdf)
 
 ## SAPFLUXNET Data Flow
 
-![](general_schema_grayed.pdf)
+\begin{columns}[T]
+\begin{column}{.48\textwidth}
+
+\includegraphics{general_schema_grayed.pdf}
+
+\centering
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+
+\vspace{10mm}
+\begin{itemize}
+  \item Automatic Quality Control checks (QC)
+  \item Automatic report generation
+  \item Storing data in special object (SfnData S4 class)
+  \item Interactive functions allowing fine control of QC
+\end{itemize}
+
+\end{column}%
+\end{columns}  
 
 ## SAPFLUXNET Data Flow
 
-![](general_schema_grayed_2.pdf)
+\begin{columns}[T]
+\begin{column}{.48\textwidth}
+
+\includegraphics{general_schema_grayed.pdf}
+
+\centering
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+
+\vspace{10mm}
+
+Benefits of R as development environment
+
+\begin{itemize}
+  \item Open
+  \item Reproducible
+  \item Easy maintenance and update
+  \item Easy integration with web and SQL technologies
+\end{itemize}
+
+\end{column}%
+\end{columns}  
 
 ## SAPFLUXNET Data Flow
 
@@ -206,7 +171,7 @@ and analyses
 \begin{column}{.48\textwidth}
 \textbf{QC Level 1}\\
 \vspace{5mm}
-In charge of general metadata and data quality checks:\\
+General metadata and data quality checks:\\
 
 \begin{itemize}
   \item Presence/Absence of metadata and data variables
@@ -217,3 +182,10 @@ In charge of general metadata and data quality checks:\\
 
 \end{column}%
 \end{columns}
+
+## TO DO
+
+1. QC2 level
+1. Status files
+1. S4 class object
+1. Apps
