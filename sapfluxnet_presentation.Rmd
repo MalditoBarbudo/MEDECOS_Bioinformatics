@@ -104,13 +104,13 @@ and analyses
 
 ![](server_folders.pdf)
 
-## SAPFLUXNET Data Flow
+## SAPFLUXNET Work Flow
 
 \centering
 
 ![](general_schema.pdf)
 
-## SAPFLUXNET Data Flow
+## SAPFLUXNET Work Flow
 
 \begin{columns}[T]
 \begin{column}{.48\textwidth}
@@ -133,7 +133,7 @@ and analyses
 \end{column}%
 \end{columns}  
 
-## SAPFLUXNET Data Flow
+## SAPFLUXNET Work Flow
 
 \begin{columns}[T]
 \begin{column}{.48\textwidth}
@@ -159,6 +159,20 @@ Benefits of R as development environment
 \end{column}%
 \end{columns}  
 
+## SAPFLUXNET SfnData S4 Class
+
+S4 classes:
+
+- Easy way of store complete site data
+- Validity checks based in fair assumptions
+- Methods: `[]`, `get`, `<-`
+- Scalable: allows for combining sites for more complex analyses (**whishlist**)
+
+SfnData class:
+
+\centering
+\includegraphics[height=5cm,width=10cm]{SfnData_schematics.pdf}
+
 ## SAPFLUXNET Data Flow
 
 \begin{columns}[T] % align columns
@@ -183,9 +197,36 @@ General metadata and data quality checks:\\
 \end{column}%
 \end{columns}
 
+## SAPFLUXNET Data Flow
+
+\begin{columns}[T] % align columns
+\begin{column}{.50\textwidth}
+
+\centering
+\includegraphics{QC2_process.pdf}
+
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+\textbf{QC Level 2}\\
+\vspace{5mm}
+Specific Data quality checks:\\
+
+\begin{itemize}
+  \item Robust outlier detection
+  \item Range checks
+  \item Unit standarization and transformation
+\end{itemize}
+
+\end{column}%
+\end{columns}
+
+## SAPFLUXNET Status File
+
+How to track site status?
+
+
 ## TO DO
 
-1. QC2 level
 1. Status files
-1. S4 class object
 1. Apps
