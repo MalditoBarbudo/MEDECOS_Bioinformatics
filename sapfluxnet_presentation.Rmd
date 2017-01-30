@@ -59,14 +59,9 @@ factors driving tree- and stand-level transpiration
 High data complexity:
 
 \begin{columns}[T]
-\begin{column}{.58\textwidth}
-
-\includegraphics{methods_plot.pdf}
-
-\end{column}%
-\hfill%
 \begin{column}{.33\textwidth}
 
+\vspace{8mm}
 \begin{table}
 \begin{tabular}{lr}
 Metadata & Items\\
@@ -79,10 +74,14 @@ Environmental & 16\\
 \hline
 \hline
 \textbf{Total} & \textbf{80}\\
-
-
 \end{tabular}
 \end{table}
+
+\end{column}%
+\hfill%
+\begin{column}{.60\textwidth}
+
+\includegraphics{methods_plot.pdf}
 
 \end{column}%
 \end{columns}  
@@ -223,10 +222,41 @@ Specific Data quality checks:\\
 
 ## SAPFLUXNET Status File
 
-How to track site status?
+\begin{columns}[T] % align columns
+\begin{column}{.50\textwidth}
 
+\centering
+\includegraphics{status_file.pdf}
 
-## TO DO
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+\textbf{How to track site status?}\\
+\vspace{5mm}
+Status file in yaml format:\\
 
-1. Status files
-1. Apps
+\begin{itemize}
+  \item Known standard (i.e. used as headers in Rmarkdown)
+  \item Easy to import/export in R 
+  \item Fast method to know the status
+\end{itemize}
+
+\end{column}%
+\end{columns}
+
+## SAPFLUXNET Apps
+
+### Control center
+\centering
+\includegraphics{sfn_monitor.pdf}
+
+## SAPFLUXNET Apps
+
+### Progress dashboard
+\centering
+\includegraphics{progress_dashboard.pdf}
+
+##
+
+\centering
+\includegraphics{orly_contribute.png}
