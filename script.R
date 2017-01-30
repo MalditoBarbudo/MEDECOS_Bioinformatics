@@ -5,6 +5,7 @@ library(ggplot2)
 library(dplyr)
 library(sapfluxnetQC1)
 library(viridis)
+library(leaflet)
 
 ## ggplot themes
 bar_minimal_theme <- function(base_size = 10, base_family = "sans") {
@@ -85,7 +86,7 @@ plant_md %>%
   geom_bar(stat = 'identity') +
   scale_fill_viridis(discrete = TRUE) +
   labs(x = 'Method', y = '% of total plants') +
-  bar_minimal_theme(base_size = 16) +
+  bar_minimal_theme(base_size = 22) +
   theme(
     legend.position = 'none'
   )
@@ -97,3 +98,40 @@ table <- data.frame(
 )
 
 knitr::kable(table, 'latex')
+
+# map
+load('preliminary_data_fixed.RData')
+
+prelim_map_data <- preliminary_survey_fixed %>%
+  select(id, latitude, longitude) %>%
+  mutate(id = as.character(id), type = 'survey')
+
+actual_map_data <- site_md %>%
+  select(si_code, si_lat, si_long) %>%
+  rename(id = si_code, latitude = si_lat, longitude = si_long) %>%
+  mutate(type = 'actual')
+
+map_data <- bind_rows(prelim_map_data, actual_map_data)
+
+# map
+
+# blues
+leaflet() %>%
+  addTiles(urlTemplate = 'http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+           attribution = 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+           options = tileOptions(noWrap = FALSE)) %>%
+  setView(lng = 60, lat = 10, zoom = 2) %>%
+  addCircleMarkers(data = prelim_map_data, lng = ~longitude, lat = ~latitude,
+                   radius = 5, fillColor = '#1B346C', stroke = FALSE,
+                   fillOpacity = 1) %>%
+  addCircleMarkers(data = actual_map_data, lng = ~longitude, lat = ~latitude,
+                   radius = 5, fillColor = '#D35400', stroke = FALSE,
+                   fillOpacity = 1) %>%
+  # addLegend('bottomleft', pal = palette, values = color_data,
+  #           title = point_color, layerId = 'legend_color', opacity = 0.8)
+  addLegend(
+    position = 'bottomleft',
+    colors = c('#1B346C', '#01ABE9'),
+    labels = c('Expected', 'Already received'), opacity = 1,
+    title = 'Data sets'
+  )

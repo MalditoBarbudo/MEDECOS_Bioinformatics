@@ -29,11 +29,11 @@ knitr::opts_chunk$set(echo = FALSE)
 \begin{column}{.54\textwidth}
 
 \vspace{5mm}
-Different \textbf{thermodynamic methods} to determine sap flow using heat as a tracer sap movement\\
+{\large Proxy of the movement of water between the soil-plant-atmosphere continuum.\\}
 \vspace{5mm}
-Proxy of the movement of water between the soil-plant-atmosphere continuum.\\
+{\large Different \textbf{thermodynamic methods} to determine sap flow using heat as a tracer sap movement\\}
 \vspace{5mm}
-Allows \textbf{upscaling} from stem to plant and landscape level.
+{\large Allows \textbf{upscaling} from stem to plant and landscape level.}
 
 \end{column}%
 \end{columns}
@@ -61,7 +61,7 @@ High data complexity:
 \begin{columns}[T]
 \begin{column}{.33\textwidth}
 
-\vspace{8mm}
+\vspace{4mm}
 \begin{table}
 \begin{tabular}{lr}
 Metadata & Items\\
