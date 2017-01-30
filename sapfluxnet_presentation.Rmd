@@ -174,51 +174,13 @@ SfnData class:
 
 ## SAPFLUXNET Data Flow
 
-\begin{columns}[T] % align columns
-\begin{column}{.50\textwidth}
-
+\centering
 \includegraphics{QC1_process.pdf}
-
-\end{column}%
-\hfill%
-\begin{column}{.48\textwidth}
-\textbf{QC Level 1}\\
-\vspace{5mm}
-General metadata and data quality checks:\\
-
-\begin{itemize}
-  \item Presence/Absence of metadata and data variables
-  \item Metadata values correctness (i.e coordinates, species names...)
-  \item Sapflow and environmental data correctness (format, timezone, gaps, continuity...)
-  \item Uniformization and unit transformations of data (solar time, sapflow at different levels...)
-\end{itemize}
-
-\end{column}%
-\end{columns}
 
 ## SAPFLUXNET Data Flow
 
-\begin{columns}[T] % align columns
-\begin{column}{.50\textwidth}
-
 \centering
 \includegraphics{QC2_process.pdf}
-
-\end{column}%
-\hfill%
-\begin{column}{.48\textwidth}
-\textbf{QC Level 2}\\
-\vspace{5mm}
-Specific Data quality checks:\\
-
-\begin{itemize}
-  \item Robust outlier detection
-  \item Range checks
-  \item Unit standarization and transformation
-\end{itemize}
-
-\end{column}%
-\end{columns}
 
 ## SAPFLUXNET Status File
 

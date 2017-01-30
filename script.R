@@ -131,7 +131,7 @@ leaflet() %>%
   #           title = point_color, layerId = 'legend_color', opacity = 0.8)
   addLegend(
     position = 'bottomleft',
-    colors = c('#1B346C', '#01ABE9'),
+    colors = c('#1B346C', '#D35400'),
     labels = c('Expected', 'Already received'), opacity = 1,
     title = 'Data sets'
   )
